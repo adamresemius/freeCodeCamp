@@ -58,14 +58,7 @@ function ExitExamModal({
         <div className='text-center'>{t('learn.exam.exit')}</div>
       </Modal.Body>
       <Modal.Footer className='reset-modal-footer'>
-        <Button
-          data-cy='exit-exam-modal-confirm'
-          block={true}
-          bsStyle='danger'
-          onClick={exitExam}
-        >
-          {t('learn.exam.exit-yes')}
-        </Button>
+        //UPDATED: Flipped the order of buttons so that the button structure is consistent with the rest of the application. Issue 'Inconsistent button order in modals #52615'
         <Button
           data-cy='exit-exam-modal-deny'
           block={true}
@@ -73,6 +66,14 @@ function ExitExamModal({
           onClick={closeExitExamModal}
         >
           {t('learn.exam.exit-no')}
+        </Button>
+                <Button
+          data-cy='exit-exam-modal-confirm'
+          block={true}
+          bsStyle='danger'
+          onClick={exitExam}
+        >
+          {t('learn.exam.exit-yes')}
         </Button>
       </Modal.Footer>
     </Modal>
